@@ -147,7 +147,7 @@ ${bridge ? `<script>${bridge}</script>` : ''}</head>
     wrapper.setAttribute('aria-labelledby', `lab-title-${id}`);
     wrapper.innerHTML = `
       <div class="lab-title"><span aria-hidden="true">&lt;/&gt;</span><h3 id="lab-title-${id}"></h3></div>
-      <p class="lab-help" id="lab-help-${id}">ערכו לשונית אחת או יותר ולחצו ״הרצת הקוד״. HTML מכיל את תוכן ה־body; תגית viewport וסגנון בסיס כבר כלולים. Tab עובר לפקד הבא; Ctrl+Enter או ⌘+Enter בעורך מריצים.</p>
+      <p class="lab-help" id="lab-help-${id}">ערכו לשונית אחת או יותר ולחצו ״הרצת הקוד״. לשונית HTML מכילה את תוכן ה־body בלבד. תגית viewport וסגנונות הבסיס כבר כלולים בהדגמה. לחיצה על Tab מעבירה את המיקוד לפקד הבא. לחיצה על Ctrl+Enter או ⌘+Enter בתוך העורך מריצה את הקוד.</p>
       <div class="editor-tabs" role="tablist" aria-label="שפות הקוד" dir="ltr"></div>
       <div class="editor-panels"></div>
       <div class="lab-actions">
@@ -164,14 +164,14 @@ ${bridge ? `<script>${bridge}</script>` : ''}</head>
           <input type="range" class="form-range" min="280" max="1200" step="1" value="360" id="width-range-${id}" aria-label="רוחב התצוגה בהדגמה">
           <input type="number" class="form-control width-number" min="280" max="1200" step="1" value="360" id="width-number-${id}" inputmode="numeric" dir="ltr">
         </div>
-        <div class="width-presets" role="group" aria-label="רוחב מהיר"></div>
+        <div class="width-presets" role="group" aria-label="בחירה מהירה של רוחב התצוגה"></div>
         <p class="viewport-note" id="viewport-note-${id}">אם התצוגה רחבה מהמקום הזמין, גללו בתוך אזור ההדגמה. זו הדמיית רוחב בלבד; היא אינה מדמה מכשיר או משנה את ה־viewport של היחידה.</p>
       </div>
       <div class="preview-scroll" tabindex="0" role="region" aria-label="תוצאת הקוד, ניתן לגלול לרוחב" aria-describedby="viewport-note-${id}">
         <iframe class="preview-frame" sandbox="allow-scripts" referrerpolicy="no-referrer" style="width:360px"></iframe>
       </div>
       <p class="preview-caption">רוחב: <bdi dir="ltr" class="width-value">360px</bdi> · התוצאה מתעדכנת בהרצה; שינוי רוחב פועל מיד.</p>
-      <details class="lab-skeleton"><summary>מה נוסף אוטומטית לקוד?</summary><p>מסמך HTML בעברית, תגית viewport וסגנון בסיס משותף עם גופן, ריווח ו־box-sizing: border-box. אין Bootstrap בתוך ההדגמה. אפשר להחליף ערכים בלשונית CSS. קוד ההדגמה פועל במסגרת נפרדת; קבצים וקישורים חיצוניים אינם נטענים.</p><pre></pre></details>`;
+      <details class="lab-skeleton"><summary>מבנה המסמך וסגנונות הבסיס של ההדגמה</summary><p>כל הדגמה כוללת מסמך HTML בעברית, תגית viewport וסגנונות בסיס לגופן ולריווח, וכן את ההגדרה box-sizing: border-box. אפשר לשנות את הערכים בלשונית CSS. קוד ההדגמה פועל במסגרת נפרדת; קבצים וקישורים חיצוניים אינם נטענים.</p><pre></pre></details>`;
     wrapper.querySelector('h3').textContent = original.title;
     wrapper.querySelector('.lab-skeleton pre').textContent = demoBaseCss.trim();
     const frame = wrapper.querySelector('iframe');
@@ -275,7 +275,7 @@ ${bridge ? `<script>${bridge}</script>` : ''}</head>
     wrapper.querySelector('[data-action="reset"]').addEventListener('click', () => {
       for (const language of Object.keys(editors)) editors[language].value = original[language];
       run();
-      status.textContent = 'קוד הדוגמה המקורי הוחזר ומורץ מחדש.';
+      status.textContent = 'הדוגמה אופסה והקוד המקורי הורץ מחדש.';
     });
     wrapper.querySelector('[data-action="download"]').addEventListener('click', () => {
       const blob = new Blob([composeDocument(getCode(), original.title)], { type: 'text/html;charset=utf-8' });
@@ -287,7 +287,7 @@ ${bridge ? `<script>${bridge}</script>` : ''}</head>
       a.click();
       a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 10000);
-      status.textContent = 'הוכן קובץ HTML עם הקוד הנוכחי מכל הלשוניות, גם שינויים שטרם הורצו. חפשו אותו בהורדות.';
+      status.textContent = 'הוכן קובץ HTML שמכיל את הקוד הנוכחי מכל הלשוניות, כולל שינויים שטרם הורצו. חפשו אותו בתיקיית ההורדות.';
     });
     const presets = wrapper.querySelector('.width-presets');
     const presetButtons = [];
@@ -330,7 +330,7 @@ ${bridge ? `<script>${bridge}</script>` : ''}</head>
           error.hidden = false;
           status.textContent = 'נמצאה שגיאה. אפשר לתקן ולהריץ שוב.';
         } else if (message.type === 'ready' && !hasError) {
-          status.textContent = 'הקוד הורץ. בדקו את התוצאה ושנו את רוחב התצוגה. CSS לא תקין עשוי להידחות בלי הודעת שגיאה.';
+          status.textContent = 'הקוד הורץ. בדקו את התוצאה ושנו את רוחב התצוגה. הדפדפן עשוי להתעלם מכללי CSS שגויים בלי להציג הודעת שגיאה.';
         }
       }
     });

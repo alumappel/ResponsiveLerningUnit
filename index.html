@@ -4,20 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="פיתוח אתרים רספונסיביים: Viewport, Flexbox, Media Queries, תפריט לנייד, תמונות ויחידות מידה. הסברים, הדגמות קוד ושאלות הבנה.">
+  <meta name="description"
+    content="פיתוח אתרים רספונסיביים: Viewport, Flexbox, Media Queries, תפריט לנייד, תמונות ויחידות מידה. הסברים, הדגמות קוד ושאלות הבנה.">
   <meta name="theme-color" content="#102e53">
   <title>פיתוח אתרים רספונסיביים</title>
-  <link rel="icon" href="assets/favicon.svg?v=20261103.2" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/bootstrap.rtl.min.css?v=20261103.2">
-  <link rel="stylesheet" href="styles.css?v=20261103.2">
-  <script src="lessons.js?v=20261103.2" defer></script>
-  <script src="app.js?v=20261103.2" defer></script>
+  <link rel="icon" href="assets/favicon.svg?v=20261104.3" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/bootstrap.rtl.min.css?v=20261104.3">
+  <link rel="stylesheet" href="styles.css?v=20261104.3">
+  <script src="lessons.js?v=20261104.3" defer></script>
+  <script src="app.js?v=20261104.3" defer></script>
 </head>
 
 <body>
   <a class="skip" href="#lesson-main">דילוג לתוכן הלמידה</a>
   <header class="topbar">
-    <a class="brand" href="#start"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span><span>פיתוח אתרים רספונסיביים
+    <a class="brand" href="#start"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span><span>פיתוח אתרים
+        רספונסיביים
         <small>תכנות 3 · יחידת למידה</small></span></a>
     <div class="top-meta">6 פרקים · 12 שאלות הבנה</div>
   </header>
@@ -26,12 +28,18 @@
       <p class="overline">פיתוח אתרים רספונסיביים</p>
       <p class="nav-intro">ניווט בין פרקי היחידה</p>
       <nav id="chapter-nav" aria-label="פרקי היחידה">
-        <a href="#start"><span class="step-no">01</span><span>רספונסיביות ו־Viewport<small>רוחב קבוע ורוחב גמיש</small></span></a>
-        <a href="#flex"><span class="step-no">02</span><span>סידור רכיבים ב־Flexbox<small>מיכל, פריטים וחלוקת מקום</small></span></a>
-        <a href="#queries"><span class="step-no">03</span><span>Media Queries<small>תנאי רוחב ו־Mobile first</small></span></a>
-        <a href="#navigation"><span class="step-no">04</span><span>תפריט רספונסיבי<small>הצגה, הסתרה ופתיחה בלחיצה</small></span></a>
-        <a href="#media"><span class="step-no">05</span><span>תמונות רספונסיביות<small>רוחב מרבי ויחס ממדים</small></span></a>
-        <a href="#type"><span class="step-no">06</span><span>טקסט ויחידות מידה<small>px, rem, em, אחוזים ויחידות תצוגה</small></span></a>
+        <a href="#start"><span class="step-no">01</span><span>רספונסיביות ו־Viewport<small>רוחב קבוע ורוחב
+              גמיש</small></span></a>
+        <a href="#flex"><span class="step-no">02</span><span>סידור רכיבים ב־Flexbox<small>מיכל, פריטים וחלוקת
+              מקום</small></span></a>
+        <a href="#queries"><span class="step-no">03</span><span>Media Queries<small>תנאי רוחב ו־Mobile
+              first</small></span></a>
+        <a href="#navigation"><span class="step-no">04</span><span>תפריט רספונסיבי<small>הצגה, הסתרה ופתיחה
+              בלחיצה</small></span></a>
+        <a href="#media"><span class="step-no">05</span><span>תמונות רספונסיביות<small>רוחב מרבי ויחס
+              ממדים</small></span></a>
+        <a href="#type"><span class="step-no">06</span><span>טקסט ויחידות מידה<small>px, rem, em, אחוזים ויחידות
+              תצוגה</small></span></a>
       </nav>
       <div class="progress-wrap">
         <label for="lesson-progress">ההתקדמות שסימנתם <span id="progress-text">0 מתוך 6 פרקים</span></label>
@@ -74,13 +82,18 @@
         </div>
         <div class="outcomes row g-0">
           <div class="col-md-6"><b>מטרות הלמידה</b>
-            <p>לסדר רכיבים, לשנות פריסה לפי רוחב, לפתוח תפריט בנייד ולהתאים תמונות וטקסט.</p>
+            <p>בסיום הלמידה תכירו מונחי בסיס בפיתוח אתרים רספונסיביים ותהיו מסוגלים לקרוא ולהבין CSS מתקדם.</p>
           </div>
           <div class="col-md-6"><b>הנחיות ללמידה</b>
-            <p>בכל פרק הסבר, דוגמה שניתנת לעריכה ושאלות ווידוא הבנה. קראו את התכנים וענו על השאלות, לאחר מכן נשוחח על
-              החומר בכיתה.</p>
+            <p>בכל פרק הסבר, דוגמה שניתנת לעריכה ושאלות לבדיקת הבנה. קראו את ההסברים וענו על השאלות. לאחר מכן נשוחח על החומר בכיתה.</p>
           </div>
         </div>
+        <h2>מתי נדרשת התאמה לרוחב התצוגה?</h2>
+        <p>פריסה שנראית תקינה בחלון רחב עלולה להיות צפופה בחלון צר: קישורים יכולים לחרוג מהשורה, תמונה יכולה
+          לצאת מגבולות התוכן וכרטיסים יכולים להיות צרים מדי לקריאה. אתר רספונסיבי משנה את רוחבי הרכיבים ואת סידורם
+          כדי שהתוכן יישאר קריא ושכל הפעולות יהיו זמינות. לא מסתפקים בהקטנת האתר כולו.</p>
+        <p>ההתאמה נדרשת גם כשמשנים את גודל חלון הדפדפן במחשב. לכן נבדוק את השטח הזמין לדף, ולא רק אם המשתמש
+          נכנס מטלפון או ממחשב.</p>
         <h2>תפקידי HTML, CSS ו־JavaScript</h2>
         <p><code>HTML</code> מגדיר את התוכן והמבנה, <code>CSS</code> את המראה והפריסה, ו־<code>JavaScript</code> את
           ההתנהגות. ברספונסיביות רוב העבודה היא ב־CSS; ניעזר ב־JavaScript רק כשהמשתמש מפעיל פעולה. כדי לייצר אתרים
@@ -99,13 +112,44 @@
             </article>
           </div>
         </div>
+        <h2>היכן כותבים את הקוד?</h2>
+        <p>באתר רגיל אפשר לשמור את המבנה בקובץ <code>index.html</code>, את העיצוב ב־<code>styles.css</code>
+          ואת ההתנהגות ב־<code>app.js</code>. כדי שהדפדפן ישתמש בקובצי העיצוב וההתנהגות, צריך לקשר אליהם מתוך ה־HTML.
+          בדוגמה הבאה שלושת הקבצים נמצאים באותה תיקייה:</p>
+        <pre class="code-sample" dir="ltr"><code>&lt;!doctype html&gt;
+&lt;html lang="he" dir="rtl"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="box"&gt;תוכן לדוגמה&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p><code>&lt;head&gt;</code> מכיל הגדרות וקישורים למשאבים; התוכן שמוצג למשתמש נמצא ב־<code>&lt;body&gt;</code>.
+          המאפיין <code>defer</code> מאפשר לקוד JavaScript לפעול לאחר שמבנה ה־HTML נקרא, כך שאפשר יהיה למצוא
+          את הרכיבים בקוד. אם קובץ נמצא בתיקייה אחרת, יש לעדכן את הנתיב אליו.</p>
+        <p>בכללי CSS מציינים תחילה <strong>בורר (Selector)</strong>, כלומר על אילו רכיבים הכלל חל. למשל,
+          <code>.box</code> בוחר רכיבים שקיבלו <code>class="box"</code>. הנקודה נכתבת בבורר ב־CSS,
+          ואינה חלק משם המחלקה ב־HTML. בתוך הסוגריים המסולסלים כותבים תכונות וערכים, כגון
+          <code>width: 100%;</code>. הנקודתיים מפרידות בין התכונה לערך, והסימן נקודה ופסיק מסיים את ההגדרה.</p>
+        <div class="notice"><strong>השימוש בעורכי הקוד ביחידה.</strong> לשונית HTML מכילה את תוכן ה־body בלבד.
+          תגית ה־viewport, ה־CSS וקוד ה־JavaScript מחוברים אוטומטית להדגמה. כתבו כל שפה בלשונית שלה
+          ולחצו ״הרצת הקוד״ לאחר שינוי. שינוי בקרת הרוחב פועל מיד על התוצאה שכבר הורצה.
+          ״איפוס הדוגמה״ מחזיר את הקוד המקורי; ״הורדת הקוד״ שומרת את שלוש הלשוניות במסמך HTML אחד.</div>
         <h2 id="viewport-explanation">הגדרת אזור התצוגה: Viewport</h2>
         <p>ה־<bdi dir="ltr">viewport</bdi> הוא אזור התצוגה של הדף בדפדפן. הוא עשוי להיות צר יותר מהמסך כולו. בטלפון,
-          תגית זו ב־<code>&lt;head&gt;</code> מנחה את הדפדפן להשתמש ברוחב המכשיר ביחידות CSS, עם הגדלה התחלתית של 1:</p>
+          תגית זו ב־<code>&lt;head&gt;</code> מנחה את הדפדפן להשתמש ברוחב המכשיר ביחידות CSS, בקנה מידה התחלתי של 1:</p>
         <pre class="code-sample"
           dir="ltr"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
         <p class="note">התגית אינה הופכת את העיצוב לרספונסיבי בעצמה. צריך גם CSS מתאים. השאירו למשתמשים אפשרות להגדיל את
           הדף; אל תוסיפו <code>user-scalable=no</code>.</p>
+        <p>את התגית מוסיפים פעם אחת בתוך ה־<code>&lt;head&gt;</code> של כל עמוד HTML, ולא בקובץ CSS.
+          <code>width=device-width</code> מנחה דפדפן נייד להתאים את אזור התצוגה לרוחב המכשיר בפיקסלי CSS;
+          <code>initial-scale=1</code> מגדיר את קנה המידה ההתחלתי. ללא הגדרה מתאימה, דפדפן נייד עשוי להשתמש
+          באזור פריסה רחב ולהקטין את הדף כדי להכניסו למסך, כך שהטקסט ייראה קטן.</p>
         <h2 id="fluid-explanation">רוחב קבוע ורוחב גמיש</h2>
         <p>מיכל הוא רכיב שמכיל רכיבים אחרים. <code>width: 600px</code> קובע לרכיב רוחב של 600 פיקסלי CSS,
           גם כשהמיכל שלו צר יותר. <code>width: 100%</code> מתאים את הרוחב לרוחב המיכל.
@@ -114,25 +158,54 @@
   width: 100%;
   max-width: 600px;
 }</code></pre>
+        <p>אם רוחב המיכל הוא 300 פיקסלים, הרכיב בדוגמה יהיה ברוחב 300 פיקסלים. אם המיכל יתרחב ל־900 פיקסלים,
+          הרכיב ייעצר ברוחב 600 פיקסלים. <code>width</code> מגדיר את הרוחב המבוקש,
+          ו־<code>max-width</code> מציב לו גבול עליון. האחוזים כאן מתייחסים למיכל המכיל, שעשוי להיות צר מה־viewport.</p>
+        <h2>ריווח ומסגרת כחלק מרוחב הרכיב</h2>
+        <p><code>padding</code> הוא הריווח הפנימי בין התוכן למסגרת, <code>border</code> היא המסגרת,
+          ו־<code>margin</code> הוא הריווח מחוץ לרכיב. כברירת מחדל, רוחב CSS מתייחס לתוכן,
+          ולכן padding ו־border יכולים להתווסף אליו ולגרום לחריגה גם כשכתבנו <code>width: 100%</code>.</p>
+        <pre class="code-sample" dir="ltr"><code>* {
+  box-sizing: border-box;
+}</code></pre>
+        <p>את הכלל הזה מוסיפים לקובץ ה־CSS. הכוכבית בוחרת את כל הרכיבים, ו־<code>border-box</code> גורם
+          לחישוב הרוחב לכלול גם את הריווח הפנימי ואת המסגרת. ריווח חיצוני אינו נכלל בו. למשל, רכיב ברוחב
+          300 פיקסלים עם padding של 20 פיקסלים בכל צד יישאר ברוחב כולל של 300 פיקסלים; השטח שנותר לתוכן יקטן.</p>
+        <p class="note">בהדגמות ההגדרה הזו כבר כלולה. גם לדף שבהדגמה יש ריווח פנימי, ולכן רוחב הקופסה יכול להיות
+          קטן מרוחב הדף שבחרתם בבקרה.</p>
         <div id="first-demo" class="activity"><span class="pill">הדגמה ותרגול</span>
           <h2>השוואת רוחב קבוע לרוחב גמיש</h2>
           <p>בחרו רוחב של 360 פיקסלים. הקופסה הראשונה קבועה ברוחב 600 פיקסלים; השנייה גמישה. איזו מהן תחרוג? לאחר מכן
             החליפו ב־CSS את <code>width: 600px</code> ב־<code>width: 100%</code> והריצו.</p>
           <div class="lab-host" data-lab="fluid"></div>
+          <p><strong>התוצאה הצפויה:</strong> ברוחב צר הקופסה הגמישה נשארת בתוך הדף, והקופסה הקבועה חורגת.
+            אחרי שינוי הרוחב של <code>.fixed</code> ל־100%, גם היא תתאים למיכל.
+            אם לא חל שינוי, ודאו שערכתם את הכלל של .fixed ולחצתם ״הרצת הקוד״.</p>
         </div>
         <div class="quiz-host" data-quiz="viewport"></div>
         <div class="quiz-host" data-quiz="fluid"></div>
         <div class="chapter-end"><label><input class="form-check-input" type="checkbox" data-complete="0"> סיימתי את
-            הפרק</label><button class="btn btn-primary" type="button" data-next>ממשיכים ל־Flexbox ←</button></div>
+            הפרק</label><button class="btn btn-primary" type="button" data-next>לפרק Flexbox ←</button></div>
       </section>
 
       <section id="flex" class="chapter" aria-labelledby="title-flex">
         <p class="overline">02 / Flexbox</p>
         <h1 id="title-flex">סידור רכיבים עם <em>Flexbox</em></h1>
-        <p class="lead">Flexbox הוא כלי CSS לסידור רכיבים בשורה או בעמודה. הגדרות המיכל משפיעות על הפריסה של הילדים הישירים שלו.</p>
-        <div class="row g-3">
+        <p class="lead">Flexbox הוא כלי CSS לסידור רכיבים בשורה או בעמודה. הגדרות המיכל משפיעות על הפריסה של הילדים
+          הישירים שלו.</p>
+        <h2>הגדרת המבנה ב־HTML והפעלת Flexbox ב־CSS</h2>
+        <p>ראשית מזהים את הרכיב שמכיל את הפריטים שרוצים לסדר יחד. בדוגמה הבאה ה־<code>ul</code> הוא המיכל,
+          ושלושת רכיבי ה־<code>li</code> שבתוכו הם הילדים הישירים. בכל פריט יש קישור <code>a</code>:</p>
+        <pre class="code-sample" dir="ltr"><code>&lt;ul class="links"&gt;
+  &lt;li&gt;&lt;a href="#intro"&gt;מידע&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#topics"&gt;נושאים&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#contact"&gt;יצירת קשר&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        <p>בקובץ ה־CSS בוחרים את המחלקה <code>.links</code> ומגדירים עליה <code>display: flex</code>.
+          הגדרת Flexbox חלה על הפריסה של הילדים הישירים של המיכל, ואינה הופכת כל צאצא בתוכו לפריט Flex של אותו מיכל.</p>
+        <div class="row g-3" id="flex-items-explanation">
           <div class="col-md-6">
-            <article class="concept-card h-100" id="flex-items-explanation">
+            <article class="concept-card h-100">
               <h2 class="h3">המיכל · Container</h2>
               <p><code>display: flex</code> הופך את המיכל ל־Flex container. ‏<code>flex-direction</code> קובע את הכיוון.
                 ‏<code>gap</code> מוסיף רווח.</p>
@@ -150,12 +223,51 @@
         <p><code>justify-content</code> מפזר פריטים לאורך הציר הראשי; <code>align-items</code> מיישר אותם בציר הניצב לו.
           ב־<code>row</code> הציר הראשי אופקי; ב־<code>column</code> הוא אנכי. בדף בעברית כיוון הכתיבה משפיע גם על תחילת
           השורה.</p>
+        <pre class="code-sample" dir="ltr"><code>.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}</code></pre>
+        <ul>
+          <li><code>flex-direction: row</code> מסדר את הפריטים בשורה; <code>column</code> מסדר אותם בעמודה.
+            בדף עם <code>dir="rtl"</code>, שורה רגילה מתחילה מימין.</li>
+          <li><code>justify-content: flex-start</code> מצמיד את הפריטים לתחילת הציר הראשי;
+            <code>center</code> מרכז אותם; <code>space-between</code> מחלק מקום פנוי בין הפריטים.
+            כשאין מקום פנוי, לא יהיה מקום נוסף לחלוקה.</li>
+          <li><code>align-items: center</code> ממרכז את הפריטים בציר הניצב. בשורה הוא מיישר אותם אנכית;
+            בעמודה הוא מיישר אותם אופקית.</li>
+          <li><code>gap: 12px</code> מוסיף רווח בין פריטים סמוכים. הוא אינו יוצר רווח בין המיכל לפריטים שבקצוות;
+            לשם כך אפשר להשתמש ב־padding של המיכל.</li>
+        </ul>
+        <h2>מה קורה כשאין מספיק מקום בשורה?</h2>
+        <p>ברירת המחדל של Flexbox היא לנסות להחזיק את הפריטים בשורה אחת. פריטים עשויים להצטמצם, אך תוכן ארוך
+          עדיין יכול לגרום לחריגה. אם רוצים לאפשר מעבר של פריטים לשורה נוספת, מוסיפים למיכל
+          <code>flex-wrap: wrap;</code>. לעומת זאת, <code>flex-direction: column</code> משנה את כיוון הפריסה כולה לעמודה.</p>
+        <pre class="code-sample" dir="ltr"><code>.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}</code></pre>
         <h2 id="flex-grow-explanation">חלוקת המקום הפנוי עם flex-grow</h2>
         <p>לאחר הקצאת המקום הראשוני לפריטים, ייתכן שנותר במיכל מקום פנוי. <code>flex-grow</code> הוא מספר שקובע
           באיזה יחס תחולק התוספת בין הפריטים. פריט עם <code>flex-grow: 4</code> יקבל פי ארבעה מהתוספת שיקבל פריט
           עם <code>flex-grow: 1</code>. זהו יחס בין התוספות, ולא בהכרח בין הרוחבים הכוללים של הפריטים.</p>
         <p>לדוגמה, אם לשני פריטים גורמי גדילה 4 ו־1, ויש 100 פיקסלים פנויים לחלוקה, הראשון יקבל תוספת של 80
-          פיקסלים והשני תוספת של 20 פיקסלים. לכל פריט נוסף המקום שקיבל על גבי גודל הבסיס שלו.</p>
+          פיקסלים והשני תוספת של 20 פיקסלים. תוספת זו מתווספת לגודל הבסיס של כל פריט.</p>
+        <p>את <code>flex-grow</code> מגדירים על הפריטים, ולא על המיכל. הבורר
+          <code>.links &gt; li</code> בוחר רק את רכיבי ה־li שהם ילדים ישירים של המיכל.
+          בתוספת <code>:first-child</code> בוחרים את הילד הראשון:</p>
+        <pre class="code-sample" dir="ltr"><code>.links &gt; li { flex-grow: 1; }
+.links &gt; li:first-child { flex-grow: 4; }</code></pre>
+        <h2>משמעות ההגדרה flex: 1 בהדגמות</h2>
+        <p><code>flex</code> היא תכונת קיצור שמחברת בין גדילה, כיווץ וגודל בסיס. ההגדרה <code>flex: 1</code>
+          מתפרשת בדפדפנים כ־<code>flex: 1 1 0%</code>: מותר לפריט לקבל מקום פנוי, מותר לו להתכווץ,
+          וגודל הבסיס לחישוב הוא 0%. כשאותה הגדרה חלה על כמה כרטיסים בשורה, היא עוזרת להם לחלוק את המקום באופן שווה.</p>
+        <p>בהדגמת הכרטיסים מופיעה גם <code>min-width: 0</code> על כל כרטיס. היא מאפשרת לו להצטמצם מתחת לרוחב
+          המינימלי שהתוכן היה כופה עליו. אם יש טקסט ארוך ללא רווחים, אפשר להוסיף לטקסט
+          <code>overflow-wrap: anywhere</code> כדי לאפשר שבירת שורה בתוכו.</p>
         <div class="activity"><span class="pill">הדגמה ותרגול</span>
           <h2>שינוי כיוון הפריסה ויישור הקישורים</h2>
           <ol>
@@ -164,6 +276,9 @@
             </li>
           </ol>
           <div class="lab-host" data-lab="flex"></div>
+          <p><strong>התוצאה הצפויה:</strong> column מציג את הקישורים זה מתחת לזה. לאחר החזרה ל־row,
+            space-between מפזר את המקום הפנוי ביניהם. את ההגדרות האלה משנים בכלל <code>.links</code>,
+            משום שזהו המיכל. הגדרתן על קישור יחיד לא תסדר את שאר הקישורים.</p>
           <details class="extension">
             <summary>תרגול נוסף: שינוי flex-grow</summary>
             <p>הוסיפו <code>.links &gt; li { flex-grow: 1; }</code> וגם
@@ -177,7 +292,7 @@
         <div class="quiz-host" data-quiz="grow"></div>
         <div class="chapter-end"><label><input class="form-check-input" type="checkbox" data-complete="1"> סיימתי את
             הפרק</label><button class="btn btn-outline-primary" type="button" data-prev>→ לפרק הקודם</button><button
-            class="btn btn-primary" type="button" data-next>משנים לפי הרוחב ←</button></div>
+            class="btn btn-primary" type="button" data-next>לפרק Media Queries ←</button></div>
       </section>
 
       <section id="queries" class="chapter" aria-labelledby="title-queries">
@@ -185,6 +300,15 @@
         <h1 id="title-queries">שינוי פריסה עם <em>Media Queries</em></h1>
         <p class="lead">Media Query מאפשר להפעיל כללי CSS רק כאשר תנאי מסוים מתקיים. כאן נשתמש בתנאי רוחב
           כדי להציג כרטיסים בעמודה בתצוגה צרה ובשורה בתצוגה רחבה.</p>
+        <h2>כתיבת תנאי רוחב בקובץ CSS</h2>
+        <p>כותבים Media Query באותו קובץ CSS שבו נכתבים שאר כללי העיצוב. השאילתה כוללת תנאי בסוגריים עגולים,
+          ובתוך הסוגריים המסולסלים שלה כותבים כללי CSS רגילים: בורר, תכונה וערך. הדפדפן בודק את התנאי בעצמו
+          בכל שינוי רוחב; אין צורך ב־JavaScript כדי להפעיל אותו.</p>
+        <ul>
+          <li><code>min-width: 768px</code> פירושו שהרוחב הוא לפחות 768 פיקסלי CSS.</li>
+          <li><code>max-width: 600px</code> פירושו שהרוחב הוא לכל היותר 600 פיקסלי CSS.</li>
+          <li>התנאי מתייחס לרוחב ה־viewport של הדף. הוא אינו מגדיר רוחב קבוע לרכיב ואינו מזהה דגם מכשיר.</li>
+        </ul>
         <h2 id="mobile-first-explanation">Mobile first: בסיס לתצוגה צרה והתאמות לתצוגה רחבה</h2>
         <p>כותבים קודם את כללי הבסיס למסך צר. אחריהם מוסיפים <code>@media</code> עם <code>min-width</code> כדי לשנות רק
           את מה שנחוץ במסך רחב. הכללים מחוץ לשאילתה ממשיכים לחול גם ברוחב גדול.</p>
@@ -192,16 +316,37 @@
 @media (min-width: 768px) {
   .cards { flex-direction: row; }
 }</code></pre>
-        <div class="notice" id="breakpoint-explanation"><strong>נקודת שבירה (Breakpoint)</strong> היא הרוחב שבו משנים את העיצוב. <code>min-width: 768px</code>
+        <div class="notice" id="breakpoint-explanation"><strong>נקודת שבירה (Breakpoint)</strong> היא הרוחב שבו משנים את
+          העיצוב. <code>min-width: 768px</code>
           כולל גם 768 בדיוק; <code>max-width: 600px</code> כולל גם 600. בוחרים נקודות לפי צורכי התוכן, ולא כהבטחה לזיהוי
           טלפון או מחשב.</div>
         <p>בדוגמה, עד רוחב 767 פיקסלים הכרטיסים מוצגים בעמודה. ברוחב 768 ומעלה מופעל הכלל שבתוך השאילתה,
           והכרטיסים מוצגים בשורה. שאר כללי הבסיס ממשיכים לחול.</p>
+        <h2>איך הדפדפן מחבר את כללי הבסיס ואת השאילתה?</h2>
+        <ol>
+          <li>הכלל שמחוץ ל־<code>@media</code> חל בכל רוחב. הוא מפעיל Flexbox ומגדיר כיוון של עמודה.</li>
+          <li>כשהרוחב קטן מ־768, התנאי אינו מתקיים והדפדפן אינו מחיל את הכללים שבתוך השאילתה.</li>
+          <li>כשהרוחב מגיע ל־768, הכלל שבתוך השאילתה נעשה פעיל. בשני הכללים מופיע אותו בורר,
+            <code>.cards</code>, והכלל המאוחר משנה את <code>flex-direction</code> לשורה.
+            אין צורך לכתוב שוב <code>display: flex</code> או את הריווחים שכבר הוגדרו בבסיס.</li>
+        </ol>
+        <p>את כללי השאילתה כותבים אחרי כללי הבסיס. כשכמה כללים חלים על אותו רכיב, סדר הכתיבה משפיע אם לבוררים
+          אותה ספציפיות, כלומר אותה דרגת עדיפות. בהדגמה הבורר זהה בשני המקומות, ולכן הכלל המאוחר קובע את הכיוון.</p>
+        <h2>בחירת נקודת שבירה לפי התוכן</h2>
+        <p>768 פיקסלים הם בחירה לדוגמה. בפרויקט מתחילים בפריסה הצרה ומרחיבים בהדרגה את החלון.
+          כאשר יש מספיק מקום להציג את הכרטיסים בשורה באופן קריא, אפשר להגדיר שם נקודת שבירה.
+          אין חובה להשתמש באותה נקודת שבירה בכל אתר או ליצור כלל לכל דגם טלפון.</p>
+        <p class="note">המספרים מוצגים כאן ברוחבים שלמים כדי להקל על הבדיקה. התנאי עצמו הוא ״לפחות 768״:
+          גם רוחב קטן במעט מ־768 עדיין אינו מפעיל אותו.</p>
         <div class="activity"><span class="pill">הדגמה ותרגול</span>
           <h2>בדיקת הפריסה לפני נקודת השבירה ואחריה</h2>
           <p>בחרו 767 ואז 768 בבקרת הרוחב. הסתכלו גם על הכרטיסים וגם על הודעת מצב השאילתה. אחר כך שנו בקוד את 768 ל־900
             והריצו; כעת בדקו ב־899 וב־900.</p>
           <div class="lab-host" data-lab="queries"></div>
+          <p><strong>התוצאה הצפויה:</strong> בקוד המקורי המעבר מעמודה לשורה קורה ב־768.
+            אחרי החלפת התנאי ל־900 והרצה, הוא יקרה ב־900. הודעת המצב שבהדגמה מסמנת אם השאילתה פעילה.
+            אם כיוון הפריסה אינו משתנה, בדקו שהכלל נמצא בתוך הסוגריים המסולסלים של השאילתה
+            ושהמספר כולל יחידת <code>px</code>.</p>
           <details class="extension">
             <summary>הסבר התחביר של Media Query</summary>
             <p><code>@media</code> פותח תנאי. הסוגריים העגולים מכילים את התנאי; בתוך הסוגריים המסולסלים כותבים כללי CSS
@@ -212,7 +357,7 @@
         <div class="quiz-host" data-quiz="mobile-first"></div>
         <div class="chapter-end"><label><input class="form-check-input" type="checkbox" data-complete="2"> סיימתי את
             הפרק</label><button class="btn btn-outline-primary" type="button" data-prev>→ לפרק הקודם</button><button
-            class="btn btn-primary" type="button" data-next>בונים תפריט לנייד ←</button></div>
+            class="btn btn-primary" type="button" data-next>לפרק תפריט רספונסיבי ←</button></div>
       </section>
 
       <section id="navigation" class="chapter" aria-labelledby="title-navigation">
@@ -221,25 +366,96 @@
         <p class="lead">ברוחב צר נציג כפתור לפתיחת התפריט. ברוחב רחב הקישורים יופיעו בשורה, בלי צורך בכפתור.</p>
         <h2 id="navigation-explanation">חלוקת התפקידים בקוד התפריט</h2>
         <ol class="explain-steps">
-          <li><b>HTML:</b> כפתור אמיתי וניווט עם מזהה. <code>aria-controls</code> מחבר ביניהם;
+          <li><b>HTML:</b> רכיב button ואזור ניווט בעל מזהה. <code>aria-controls</code> מחבר ביניהם;
             <code>aria-expanded</code> מתאר אם התפריט פתוח.
           </li>
           <li><b>CSS:</b> במצב צר מסתירים את הקישורים עד לפתיחה. מ־768 פיקסלים מציגים אותם תמיד ומסתירים את הכפתור.</li>
           <li><b>JavaScript:</b> לחיצה מחליפה מצב, מעדכנת מחלקה וגם את <code>aria-expanded</code>.</li>
         </ol>
+        <h2>מבנה הכפתור והניווט ב־HTML</h2>
+        <p>מוסיפים כפתור <code>button</code> ורכיב <code>nav</code> עם הקישורים. לכל אחד מזהה
+          <code>id</code> ייחודי, כדי שנוכל לבחור אותו ב־CSS וב־JavaScript.
+          בורר שמתחיל ב־<code>#</code> מתייחס למזהה: <code>#main-nav</code> בוחר את הרכיב עם
+          <code>id="main-nav"</code>. להבדיל ממחלקה, מזהה אמור להופיע פעם אחת בלבד בעמוד.</p>
+        <pre class="code-sample" dir="ltr"><code>&lt;button id="nav-button" type="button"
+  aria-controls="main-nav" aria-expanded="false" hidden&gt;
+  תפריט
+&lt;/button&gt;
+&lt;nav id="main-nav" aria-label="תפריט הסדנאות"&gt;
+  &lt;a href="#about"&gt;על הסדנאות&lt;/a&gt;
+  &lt;a href="#workshops"&gt;הסדנאות&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        <p><code>type="button"</code> מגדיר כפתור פעולה, שאינו כפתור שליחת טופס.
+          כפתור HTML רגיל כבר תומך בהפעלה באמצעות Enter או Space, ו־<code>aria-label</code>
+          נותן לאזור הניווט שם שקורא מסך יכול להקריא. המאפיין <code>hidden</code> מסתיר בתחילה את הכפתור;
+          קוד ה־JavaScript מסיר אותו לאחר שהגדיר את פעולת הפתיחה.</p>
+        <h2>הצגה והסתרה באמצעות מחלקות CSS</h2>
+        <p>לאחר הכנת הכפתור, הקוד מוסיף ל־html את המחלקה <code>nav-ready</code>.
+          בתצוגה צרה, הכלל <code>.nav-ready #main-nav</code> מסתיר את הקישורים באמצעות <code>display: none</code>.
+          כשהניווט מקבל גם את המחלקה <code>is-open</code>, כלל נוסף מציג אותו:</p>
+        <pre class="code-sample" dir="ltr"><code>.nav-ready #nav-button { display: block; }
+.nav-ready #main-nav { display: none; flex-direction: column; }
+.nav-ready #main-nav.is-open { display: flex; }
+@media (min-width: 768px) {
+  .nav-ready #main-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-ready #nav-button { display: none; }
+}</code></pre>
+        <p><code>#main-nav.is-open</code> פירושו ״הרכיב בעל המזהה main-nav שגם נושא את המחלקה is-open״.
+          הרווח אחרי <code>.nav-ready</code> מציין שהרכיב נמצא בתוך רכיב עם מחלקה זו.
+          <code>display: none</code> מסיר את הקישורים מהתצוגה ומסדר המעבר באמצעות Tab;
+          שינוי ל־<code>display: flex</code> מציג אותם ומסדר אותם שוב.</p>
+        <p>ברוחב 768 ומעלה, Media Query מציג את הניווט בשורה גם כשהמחלקה <code>is-open</code> אינה קיימת,
+          ומסתיר את הכפתור. לפני ש־JavaScript פועל, הקישורים נשארים גלויים כדי שלא לחסום את הניווט.</p>
         <h2 id="expanded-explanation">ציון מצב התפריט עבור טכנולוגיות מסייעות</h2>
-        <p>לכפתור יש את המאפיין <code>aria-controls="main-nav"</code>, שמפנה למזהה הניווט שעליו הוא שולט.
+        <p>לכפתור מוגדר המאפיין <code>aria-controls="main-nav"</code>, שמפנה למזהה הניווט שעליו הוא שולט.
           המאפיין <code>aria-expanded</code> מתאר את מצב הפתיחה: <code>false</code> כשהתפריט סגור,
           ו־<code>true</code> כשהוא פתוח. כך קורא מסך יכול להודיע למשתמש אם התפריט פתוח או סגור.</p>
         <p>בעת לחיצה, ה־JavaScript מעדכן שני דברים: את המחלקה <code>is-open</code>, שקובעת אם הקישורים מוצגים
-          בתצוגה צרה, ואת הערך של <code>aria-expanded</code> בכפתור. לדוגמה, בפתיחה:</p>
-        <pre class="code-sample" dir="ltr"><code>nav.classList.add('is-open');
-button.setAttribute('aria-expanded', 'true');</code></pre>
+          בתצוגה צרה, ואת הערך של <code>aria-expanded</code> בכפתור. בפתיחה מוסיפים את המחלקה ומגדירים true;
+          בסגירה מסירים את המחלקה ומגדירים false.</p>
+        <h2>קריאת קוד ה־JavaScript של הפתיחה והסגירה</h2>
+        <p>הקוד מוצא את הכפתור ואת הניווט באמצעות <code>document.querySelector</code>, שמחזיר את הרכיב הראשון
+          המתאים לבורר. המשתנים <code>button</code> ו־<code>nav</code> שומרים הפניות לרכיבים האלה:</p>
+        <pre class="code-sample" dir="ltr"><code>const button = document.querySelector('#nav-button');
+const nav = document.querySelector('#main-nav');
+
+function setOpen(open) {
+  nav.classList.toggle('is-open', open);
+  button.setAttribute('aria-expanded', String(open));
+}
+button.addEventListener('click', () =&gt; {
+  setOpen(button.getAttribute('aria-expanded') !== 'true');
+});
+button.hidden = false;
+document.documentElement.classList.add('nav-ready');</code></pre>
+        <ul>
+          <li>הפונקציה <code>setOpen</code> מקבלת ערך בוליאני: <code>true</code> לפתיחה או <code>false</code> לסגירה.</li>
+          <li><code>classList.toggle('is-open', open)</code> מוסיף את המחלקה כאשר open הוא true,
+            ומסיר אותה כאשר הוא false. זו המחלקה שכללי ה־CSS בודקים.</li>
+          <li><code>setAttribute</code> מעדכן מאפיין HTML. ‏<code>String(open)</code> ממיר את הערך הבוליאני
+            לטקסט <code>'true'</code> או <code>'false'</code> עבור המאפיין <code>aria-expanded</code>.</li>
+          <li><code>addEventListener('click', ...)</code> מגדיר מה יקרה בלחיצה. הביטוי <code>!== 'true'</code> בודק אם התפריט אינו פתוח כרגע: אם התפריט סגור, נפתח אותו; אם הוא פתוח, נסגור אותו.</li>
+        </ul>
+        <p>שתי השורות האחרונות משלימות את ההכנה: <code>button.hidden = false</code> מסיר את ההסתרה הראשונית
+          של הכפתור, ו־<code>document.documentElement</code> הוא רכיב html, שעליו מוסיפים את המחלקה nav-ready.
+          כך כללי ההסתרה ב־CSS נכנסים לתוקף רק אחרי שהכפתור מסוגל להגיב ללחיצה.</p>
+        <p>בקוד המלא מופיעה גם <code>window.matchMedia('(min-width: 768px)')</code>.
+          היא מאפשרת ל־JavaScript לבדוק את אותו תנאי רוחב, באמצעות הערך <code>matches</code>,
+          ולטפל באירוע <code>change</code> כאשר התנאי משתנה. בהדגמה היא משמשת לאיפוס מצב הפתיחה במעבר
+          בין תצוגה צרה לרחבה. אם משנים את נקודת השבירה, מעדכנים את המספר גם ב־CSS וגם ב־JavaScript.</p>
+        <p>סגירה עם Escape מחזירה את המיקוד לכפתור, כדי שהמשתמש יוכל להמשיך לנווט מהמקום שבו פתח את התפריט.
+          גם שינוי רוחב מטופל כך שהמיקוד לא יישאר על רכיב שנעשה מוסתר.</p>
         <div class="activity"><span class="pill">הדגמה ותרגול</span>
           <h2>בדיקת התפריט בתצוגה צרה ורחבה</h2>
           <p>בחרו 360, לחצו על ״תפריט״ בתוך ההדגמה, ואז בדקו גם עם המקלדת: Tab למעבר, Enter לפתיחה ו־Escape לסגירה. עברו
             ל־1024 וחזרו ל־360: התפריט חוזר למצב סגור. בלשונית JS מצאו את השורה שמעדכנת <code>aria-expanded</code>.</p>
           <div class="lab-host" data-lab="navigation"></div>
+          <p><strong>התוצאה הצפויה:</strong> בתצוגה צרה הכפתור מציג או מסתיר את הקישורים בכל לחיצה;
+            בתצוגה רחבה הקישורים תמיד גלויים והכפתור מוסתר. אם לחיצה אינה משנה דבר, ודאו שהמזהים
+            ב־HTML תואמים לבוררים ב־JavaScript ושמחלקת <code>is-open</code> נכתבת באותו אופן ב־CSS וב־JavaScript.</p>
         </div>
         <div class="notice"><strong>שמירה על גישה לקישורים.</strong> כאן מסתירים קישורים רק כאשר יש דרך לפתוח אותם.
           אין להעלים תוכן חיוני בנייד בלי להציע אליו גישה. סדר הקישורים ב־HTML נשמר גם כשהפריסה משתנה.</div>
@@ -247,7 +463,7 @@ button.setAttribute('aria-expanded', 'true');</code></pre>
         <div class="quiz-host" data-quiz="nav-accessible"></div>
         <div class="chapter-end"><label><input class="form-check-input" type="checkbox" data-complete="3"> סיימתי את
             הפרק</label><button class="btn btn-outline-primary" type="button" data-prev>→ לפרק הקודם</button><button
-            class="btn btn-primary" type="button" data-next>מתאימים תמונות ←</button></div>
+            class="btn btn-primary" type="button" data-next>לפרק תמונות רספונסיביות ←</button></div>
       </section>
 
       <section id="media" class="chapter" aria-labelledby="title-media">
@@ -255,6 +471,19 @@ button.setAttribute('aria-expanded', 'true');</code></pre>
         <h1 id="title-media">התאמת תמונות <em>לרוחב המיכל</em></h1>
         <p class="lead">תמונה ברוחב טבעי גדול עלולה להרחיב את התוכן מעבר למיכל. שתי הגדרות קצרות שומרות אותה בתוך
           הגבולות.</p>
+        <h2>הוספת תמונה והגדרת המיכל שלה</h2>
+        <p>ב־HTML מוסיפים רכיב <code>img</code>. המאפיין <code>src</code> מציין את הנתיב לקובץ התמונה,
+          ו־<code>alt</code> מספק תיאור חלופי של המידע שבתמונה. אם התמונה נמצאת בתוך כרטיס או בתוך <code>figure</code>, הרכיב שמכיל אותה קובע את השטח הזמין לה.</p>
+        <pre class="code-sample" dir="ltr"><code>&lt;figure&gt;
+  &lt;img src="images/campus.jpg"
+    width="900" height="400"
+    alt="בניין הקמפוס והרחבה שלפניו"&gt;
+  &lt;figcaption&gt;הקמפוס&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        <p>בדוגמה זו יש להחליף את ערך המאפיין src בנתיב לקובץ תמונה שקיים באתר. <code>figure</code> מקבץ את התמונה ואת הכיתוב,
+          ו־<code>figcaption</code> הוא הכיתוב המוצג לידה. המאפיינים <code>width</code> ו־<code>height</code>
+          מציינים את ממדי התמונה ומאפשרים לדפדפן להקצות מקום ביחס המתאים עוד לפני טעינתה.
+          כללי CSS עדיין יכולים להתאים את גודלה בפועל.</p>
         <h2 id="image-sizing-explanation">הגבלת רוחב התמונה עם max-width</h2>
         <pre class="code-sample" dir="ltr"><code>img {
   max-width: 100%;
@@ -263,24 +492,39 @@ button.setAttribute('aria-expanded', 'true');</code></pre>
         <p><code>max-width: 100%</code> מגביל את הרוחב המרבי של התמונה לרוחב המיכל. אם התמונה גדולה מהמיכל,
           היא תוקטן כדי להיכנס אליו. אם היא קטנה ממנו ולא נקבע לה רוחב נוסף, היא יכולה להישאר בגודלה המקורי.
           לדוגמה, תמונה ברוחב טבעי של 200 פיקסלים במיכל של 500 פיקסלים לא תוגדל רק בגלל הגדרה זו.</p>
+        <p>את הכלל כותבים בקובץ CSS. הבורר <code>img</code> מחיל אותו על כל התמונות בעמוד; אם רוצים להחיל
+          אותו רק על תמונות בכרטיסים, אפשר לכתוב <code>.card img</code> ולתת למיכל את המחלקה card.
+          לעומת <code>max-width: 100%</code>, ההגדרה <code>width: 100%</code> מבקשת למלא את רוחב המיכל
+          גם אם הדבר יגדיל תמונה קטנה ועלול לפגוע בחדותה.</p>
         <h2 id="image-ratio-explanation">שמירה על יחס הממדים עם height: auto</h2>
         <p><code>height: auto</code> מתאים את גובה התמונה לרוחב שלה ושומר על היחס בין הרוחב לגובה.
           לדוגמה, תמונה בגודל 900×400 שתוקטן לרוחב של 450 פיקסלים תהיה בגובה 200 פיקסלים.
           גובה CSS קבוע של 400 פיקסלים במצב הזה היה מעוות את התמונה.</p>
+        <p>השינוי נוגע לתצוגה בדפדפן: קובץ התמונה עצמו אינו משתנה. בהדגמה מוגדרת לתמונה גם התכונה <code>display: block</code>, כדי להציג אותה כרכיב בלוק ולמנוע את הרווח הקטן שיכול להופיע
+          מתחת לתמונה כשהיא מוצגת כחלק משורת טקסט.</p>
         <div class="activity"><span class="pill">הדגמה ותרגול</span>
           <h2>בדיקת תמונה עם הגבלת רוחב ובלעדיה</h2>
           <p>ברוחב 360 התמונה נכנסת למסגרת. שנו את <code>max-width</code> ל־<code>none</code>, הריצו וגללו בתוך ההדגמה
             כדי לראות את החריגה. החזירו ל־<code>100%</code>. מה נפתר בלי לשנות את קובץ התמונה?</p>
           <div class="lab-host" data-lab="media"></div>
+          <p><strong>התוצאה הצפויה:</strong> הערך <code>none</code> מסיר את הגבלת הרוחב המרבי, והתמונה הרחבה
+            חורגת מהמיכל. החזרת 100% מתקנת את החריגה; הגובה משתנה יחד עם הרוחב בגלל <code>height: auto</code>.
+            התמונה כבר כלולה בקוד ההדגמה, ואין צורך לשנות את src כדי לבדוק את כללי הגודל.</p>
         </div>
-        <p class="note">לסרטון מקומי אפשר להשתמש גם ב־<code>video { max-width: 100%; height: auto; }</code>. להטמעה כמו
-          iframe מתאים בדרך כלל מיכל עם <code>aspect-ratio</code>. זו התאמת פריסה; בחירה בקובץ תמונה קטן יותר לנייד היא
-          נושא נוסף.</p>
+        <h2>התאמת סרטון מקומי</h2>
+        <p>אותו עיקרון מתאים גם לרכיב <code>video</code> שמציג קובץ וידאו באתר. מגבילים את הרוחב ומשאירים
+          את הגובה אוטומטי כדי לשמור על יחס הממדים:</p>
+        <pre class="code-sample" dir="ltr"><code>video {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+        <p class="note">הקטנת רוחב התצוגה אינה מפחיתה את גודל הקובץ שהדפדפן מוריד. לכן, בנוסף להתאמת הפריסה,
+          כדאי להשתמש בקובצי תמונה ווידאו בגודל מתאים לצורכי האתר.</p>
         <div class="quiz-host" data-quiz="image-max"></div>
         <div class="quiz-host" data-quiz="image-ratio"></div>
         <div class="chapter-end"><label><input class="form-check-input" type="checkbox" data-complete="4"> סיימתי את
             הפרק</label><button class="btn btn-outline-primary" type="button" data-prev>→ לפרק הקודם</button><button
-            class="btn btn-primary" type="button" data-next>בוחרים יחידות מידה ←</button></div>
+            class="btn btn-primary" type="button" data-next>לפרק יחידות מידה ←</button></div>
       </section>
 
       <section id="type" class="chapter" aria-labelledby="title-type">
@@ -291,7 +535,51 @@ button.setAttribute('aria-expanded', 'true');</code></pre>
         <h2 id="rem-explanation">חישוב גודל טקסט עם rem</h2>
         <p>רכיב השורש של המסמך הוא <code>html</code>. יחידת <code>rem</code> מתייחסת לגודל הגופן שמוגדר בו.
           אם גודל הגופן בשורש הוא 16 פיקסלים, <code>1rem</code> שווה ל־16 פיקסלים ו־<code>2rem</code> ל־32.
-          אם נשנה את גודל השורש ל־20 פיקסלים, <code>2rem</code> יהיו 40 פיקסלים.</p>
+          אם נשנה את גודל הגופן בשורש ל־20 פיקסלים, <code>2rem</code> יהיו 40 פיקסלים.</p>
+        <h2 id="root-font-definition">היכן ואיך מגדירים את גודל הבסיס של rem?</h2>
+        <p>מגדירים את גודל הבסיס באמצעות התכונה <code>font-size</code> בכלל שהבורר שלו הוא <code>html</code>
+          בקובץ ה־CSS שמקושר לאתר. אפשר לכתוב את אותם כללים גם בתוך תגית <code>&lt;style&gt;</code>
+          ב־head, אך באתר עם כמה עמודים נוח לשמור אותם בקובץ עיצוב משותף.</p>
+        <pre class="code-sample" dir="ltr"><code>/* בקובץ styles.css */
+html {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1rem;
+}</code></pre>
+        <p>כאן הבסיס הוא 16 פיקסלים. גודל הכותרת יהיה 32 פיקסלים וגודל הפסקה 16 פיקסלים.
+          אם נשנה רק את השורה ב־html ל־<code>font-size: 20px</code>, הכותרת תהיה 40 פיקסלים
+          והפסקה 20 פיקסלים. לא צריך לשנות את הערכים 2rem ו־1rem בכל רכיב בנפרד.</p>
+        <p><strong>הבסיס נקבע ב־html, ולא ב־body.</strong> אם גודל הגופן ב־html הוא 16px ול־body הוגדר <code>font-size: 20px</code>, ערך של <code>1rem</code> עדיין שווה ל־16px.
+          טקסט שאינו מקבל הגדרת גודל משלו יכול לרשת את גודל ה־body, אך חישוב rem ממשיך להשתמש בשורש.</p>
+        <h2>שימוש בהעדפת גודל הגופן של המשתמש</h2>
+        <p>אם לא מגדירים גודל גופן ב־html, הדפדפן משתמש בגודל הבסיס שלו, שבדרך כלל הוא 16 פיקסלים,
+          אך המשתמש יכול לשנות אותו. דרך מקובלת לשמור על ההעדפה הזו היא לכתוב:</p>
+        <pre class="code-sample" dir="ltr"><code>html {
+  font-size: 100%;
+}</code></pre>
+        <p>במקרה הזה 100% מתייחס לגודל גופן הבסיס של הדפדפן. אם המשתמש בחר 20 פיקסלים,
+          <code>1rem</code> יהיה 20 פיקסלים ו־<code>2rem</code> יהיו 40 פיקסלים.
+          בהדגמה נקבע בסיס מפורש של 16px כדי שאפשר יהיה לבצע את החישוב ולשנות אותו באופן מבוקר.</p>
+        <h2>שימוש ב־rem גם לריווח</h2>
+        <p>אפשר להשתמש ב־rem גם ב־padding, ב־margin ובמידות אחרות. כך אפשר לקשור את המרווחים לגודל גופן הבסיס:</p>
+        <pre class="code-sample" dir="ltr"><code>.card {
+  padding: 1rem;
+  margin-block-start: 0.5rem;
+}</code></pre>
+        <p>בבסיס של 16px, הריווח הפנימי יהיה 16 פיקסלים והמרווח שמעל הכרטיס 8 פיקסלים.
+          בבסיס של 20px הם יהיו 20 ו־10 פיקסלים. <code>margin-block-start</code> מציין מרווח בתחילת
+          כיוון הבלוק, שבכתיבה האופקית של הדף הוא המרווח העליון.</p>
+        <h2>ההבדל בין em לבין rem</h2>
+        <p>בהגדרת <code>font-size</code>, היחידה <code>em</code> מתייחסת לגודל הגופן שהרכיב יורש מההורה שלו.
+          למשל, אם גודל הגופן בהורה הוא 20px, אז <code>font-size: 1.5em</code> על הילד ייתן 30px.
+          בתכונה כמו padding, היחידה em מתייחסת לגודל הגופן של הרכיב עצמו; לכן <code>padding: 1em</code>
+          על אותו ילד יהיה 30 פיקסלים.</p>
+        <p>לעומת זאת, rem מתייחס תמיד לגודל הגופן בשורש, גם כאשר הרכיב נמצא בתוך רכיבים נוספים.
+          הוא מתאים כשרוצים בסיס אחיד לחישוב בכל האתר. em יכול להתאים כשמרווח צריך להשתנות עם גודל הגופן של רכיב מסוים, למשל הריווח הפנימי בכפתור.</p>
         <h2 id="units-explanation">יחידות מידה נפוצות</h2>
         <div class="table-responsive">
           <table class="table units-table">
@@ -332,15 +620,39 @@ button.setAttribute('aria-expanded', 'true');</code></pre>
             </tbody>
           </table>
         </div>
+        <h2>ההבדל בין אחוזים לבין יחידות אזור התצוגה</h2>
+        <p>ב־<code>width: 50%</code> הבסיס הוא רוחב המיכל המכיל. אם רוחב המיכל 400 פיקסלים, רוחב הרכיב יהיה
+          200 פיקסלים. לעומת זאת, <code>width: 50vw</code> מתייחס למחצית רוחב ה־viewport של הדף:
+          אם רוחב התצוגה הוא 1000 פיקסלים, נקבל 500 פיקסלים גם כשהמיכל צר יותר.</p>
+        <p><code>1vh</code> הוא 1% מגובה אזור התצוגה. יחידות vw ו־vh מתאימות כאשר רוצים לקשור מידה לאזור התצוגה,
+          ואילו אחוזי רוחב מתאימים לרכיב שצריך להתאים למיכל שלו. לטקסט ביחידה זו נשתמש ב־rem, כדי לקשור
+          את גודל הגופן לבסיס קריא ולא רק לרוחב החלון.</p>
+        <h2>שינוי גודל טקסט בנקודת שבירה</h2>
+        <p>rem אינו משתנה אוטומטית כאשר החלון מתרחב. כדי שכותרת תגדל בתצוגה רחבה, אפשר לשנות את ערך ה־rem שלה בתוך
+          Media Query, תוך השארת גודל הבסיס:</p>
+        <pre class="code-sample" dir="ltr"><code>html { font-size: 100%; }
+h1 { font-size: 2rem; }
+@media (min-width: 768px) {
+  h1 { font-size: 2.5rem; }
+}</code></pre>
+        <p>כאשר הבסיס הוא 16 פיקסלים, הכותרת תהיה 32 פיקסלים בתצוגה צרה ו־40 פיקסלים מ־768 ומעלה.
+          אפשר גם לשנות את גודל הגופן של html בתוך שאילתה, אבל אז כל הגדלים שמוגדרים ב־rem ישתנו יחד,
+          כולל ריווחים. לכן בוחרים אם השינוי נדרש לרכיב מסוים או לכל האתר.</p>
         <div class="activity"><span class="pill">הדגמה ותרגול</span>
-          <h2>השפעת גודל גופן השורש על רכיבים שמוגדרים ב־rem</h2>
-          <p>כותרת ההדגמה היא בגודל <code>2rem</code>, והפסקה בגודל <code>1rem</code>. שנו את גודל השורש
-            מ־<code>16px</code> ל־<code>20px</code> והריצו. מה יהיה גודל כל אחד מהם? השוו לתווית בגודל <code>16px</code>
-            שנשארת קבועה.</p>
+          <h2>השפעת גודל הגופן בשורש על רכיבים שמוגדרים ב־rem</h2>
+          <ol>
+            <li>פתחו את לשונית CSS ומצאו את הכלל <code>html { font-size: 16px; }</code>.</li>
+            <li>שנו רק את 16px ל־20px ולחצו ״הרצת הקוד״. הכותרת מוגדרת כ־2rem והפסקה כ־1rem.</li>
+            <li>השוו את הכותרת, הפסקה והריווח לתווית שמוגדרת בגודל קבוע של 16px.</li>
+            <li>החזירו את הבסיס ל־16px והריצו שוב כדי להשוות למצב המקורי.</li>
+          </ol>
           <div class="lab-host" data-lab="type"></div>
+          <p><strong>התוצאה הצפויה:</strong> בבסיס של 20px הכותרת היא 40px, הפסקה 20px והריווח הפנימי של
+            הקופסה 20px. התווית נשארת 16px כי אינה מוגדרת ב־rem. לכל הדגמה יש מסמך HTML נפרד,
+            ולכן שינוי html בעורך משפיע רק על ההדגמה, ולא על גודל הטקסט של יחידת הלמידה.</p>
         </div>
-        <div class="notice"><strong>הקשר בין יחידות מידה לרוחב התצוגה.</strong> ‏<code>rem</code> תלוי בגודל גופן השורש,
-          ולא ישירות ברוחב התצוגה. אפשר לשנות את גודל השורש באמצעות Media Query. בממשק אמיתי כדאי לכבד גם העדפות גופן של
+        <div class="notice"><strong>הקשר בין יחידות מידה לרוחב התצוגה.</strong> ‏<code>rem</code> תלוי בגודל הגופן בשורש,
+          ולא ישירות ברוחב התצוגה. אפשר לשנות את גודל הגופן בשורש באמצעות Media Query. בממשק אמיתי כדאי לכבד גם העדפות גופן של
           המשתמש, למשל באמצעות <code>html { font-size: 100%; }</code>, ולבדוק הגדלה ושבירת שורות.</div>
         <div class="quiz-host" data-quiz="rem"></div>
         <div class="quiz-host" data-quiz="units"></div>

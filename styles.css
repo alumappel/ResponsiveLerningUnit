@@ -40,12 +40,10 @@ code, pre, .editor { font-family: Consolas, "Cascadia Code", "Courier New", mono
 .skip { position: absolute; inset-inline-start: 20px; top: -100px; background: white; padding: 12px; z-index: 100; border: 2px solid var(--blue); border-radius: 6px; }
 .skip:focus { top: 10px; }
 .topbar { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 3vw; background: #fff; border-bottom: 1px solid var(--line); }
-.brand { display: flex; align-items: center; gap: 13px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.4; }
+.brand { display: flex; align-items: center; gap: 13px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.4; min-width: 0; }
 .brand small { display: block; font-size: .73rem; color: var(--muted); font-weight: 400; margin-top: 4px; }
-.brand-icon { background: var(--navy); color: white; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 10px; font: 700 .87rem Consolas, monospace; direction: ltr; }
+.brand-icon { background: var(--navy); color: white; width: 42px; height: 42px; flex-shrink: 0; display: grid; place-items: center; border-radius: 10px; font: 700 .87rem Consolas, monospace; direction: ltr; }
 .top-meta { font-size: .75rem; color: var(--muted); display: flex; gap: 10px; align-items: center; }
-.time-dot { width: 7px; height: 7px; background: var(--blue); border-radius: 50%; }
-.meta-divider { color: #a4b4c7; }
 .shell { max-width: 1580px; display: grid; grid-template-columns: 270px minmax(0, 1fr); margin: auto; min-height: calc(100vh - 88px); }
 .sidebar { padding: 32px 20px; border-inline-end: 1px solid var(--line); position: sticky; top: 0; height: 100dvh; overflow-y: auto; }
 .overline { font-size: .77rem; color: var(--blue); font-weight: 700; margin-bottom: 14px; }
@@ -66,7 +64,6 @@ progress::-webkit-progress-bar { background: #dce5f1; }
 progress::-webkit-progress-value { background: var(--blue); }
 progress::-moz-progress-bar { background: var(--blue); }
 .progress-wrap p { color: var(--muted); font-size: .68rem; line-height: 1.7; margin: 12px 0; }
-.source-link { display: inline-flex; gap: 16px; font-size: .76rem; padding: 10px 0; }
 main#lesson-main { background: white; min-width: 0; padding: 42px clamp(22px, 4vw, 65px) 0; }
 .chapter { max-width: 1020px; margin: auto; scroll-margin-top: 20px; }
 .enhanced .chapter[hidden] { display: none; }
@@ -204,7 +201,6 @@ summary { cursor: pointer; color: #164a8f; font-weight: 600; padding: 10px 0; }
   .progress-wrap label span { display: inline; margin-inline-start: 5px; }
   .progress-wrap progress { margin: 0; }
   .progress-wrap p { grid-column: 1/-1; margin: 0; font-size: .62rem; }
-  .source-link { font-size: .66rem; padding: 5px 0 0; }
   main#lesson-main { padding: 28px 18px 0; }
   h1 { font-size: 2.15rem; }
   h2 { font-size: 1.35rem; }
